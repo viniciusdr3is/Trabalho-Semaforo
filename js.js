@@ -1,12 +1,12 @@
-let currentLight = 0;
+let luzAtiva = 0;
 
-function changeLight() {
-    const lights = [
+function mudaCor() {
+    const luz = [
         document.getElementById('red'),
         document.getElementById('yellow'),
         document.getElementById('green')
     ];
-    lights[currentLight].classList.remove('active');
-    currentLight = (currentLight + 1) % lights.length;
-    lights[currentLight].classList.add('active');
+    luz[luzAtiva].classList.remove('ativo');
+    luzAtiva = (luzAtiva + 1) % luz.length;
+    luz[luzAtiva].classList.add('ativo');
 }
